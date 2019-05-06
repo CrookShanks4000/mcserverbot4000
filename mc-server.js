@@ -16,9 +16,9 @@ client.on('message', message => {
                 return message.reply('Error getting Minecraft server status...');
             }
             body = JSON.parse(body);
-            var status = '*Server is currently offline*';
+            var status = 'Server is currently offline';
             if(body.online) {
-                status = 'Server is **online** on 96.42.30.52:25565  -  ';
+                status = '**' + body.motd + '** server is **online** on 96.42.30.52:25565  -  ';
                 if(body.players.now) {
                     status += '**' + body.players.now + '** people are playing!';
                 } else {
