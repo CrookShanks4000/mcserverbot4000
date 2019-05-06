@@ -1,0 +1,25 @@
+{
+
+  "name": "mcserverbot4000",
+
+  "description": "mcserver",
+
+  "version": "0.0.0",
+
+  "main": "mc-server.js",
+
+  "scripts": {
+
+    "start": "node mc-server.js"
+
+  },
+
+  "dependencies": {
+
+    "discord.js": "11.1.0",
+
+    "request": "2.81.0"
+
+  }
+
+}
