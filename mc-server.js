@@ -3,9 +3,9 @@ const client = new Discord.Client();
 client.login(process.env.BOT_TOKEN);
 
 var request = require('request');
-var mcCommand = '/minecraft'; // Command for triggering
-var mcIP = '96.42.30.52'; // Your MC server IP
-var mcPort = 25565; // Your MC server port (25565 is the default)
+var mcCommand = process.env.COMMAND; // Command for triggering
+var mcIP = process.env.IP; // Your MC server IP
+var mcPort = process.env.PORT; // Your MC server port (25565 is the default)
 
 client.on('message', message => {
     if (message.content === mcCommand) {
