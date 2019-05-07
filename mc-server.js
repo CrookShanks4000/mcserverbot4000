@@ -21,8 +21,10 @@ client.on('message', message => {
             if(body.online) {
                 status = '**' + body.motd + '** server is **online** on ' + mcIP + ':' + mcPort + '  -  ';
                 if(body.players.now === '1') {
+                    console.log(body.players.now);
                     status += '**1** person is playing!';
                 } else if(body.players.now) {
+                    console.log(body.players.now);
                     status += '**' + body.players.now + '** people are playing!';
                 } else {
                     status += '*Nobody is playing!*';
