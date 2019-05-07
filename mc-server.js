@@ -10,6 +10,7 @@ var mcPort = process.env.PORT; // Your MC server port (25565 is the default)
 client.on('message', message => {
     if (message.content === mcCommand) {
         var url = 'http://mcapi.us/server/status?ip=' + mcIP + '&port=' + mcPort;
+        console.log(url);
         request(url, function(err, response, body) {
             if(err) {
                 console.log(err);
