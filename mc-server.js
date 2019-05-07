@@ -18,7 +18,7 @@ client.on('message', message => {
             body = JSON.parse(body);
             var status = 'Server is currently offline';
             if(body.online) {
-                status = '**' + body.motd + '** server is **online** on 96.42.30.52:25565  -  ';
+                status = '**' + body.motd + '** server is **online** on ' + mcIP + ':' + mcPort + '  -  ';
                 if(body.players.now) {
                     status += '**' + body.players.now + '** people are playing!';
                 } else {
