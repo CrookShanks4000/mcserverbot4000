@@ -5,7 +5,7 @@ client.login(process.env.BOT_TOKEN);
 var request = require('request');
 var mcCommand = process.env.COMMAND; // Command for triggering
 var mcIP = process.env.IP; // Your MC server IP
-var mcPort = process.env.PORT; // Your MC server port (25565 is the default)
+var mcPort = process.env.MC_PORT; // Your MC server port (25565 is the default)
 
 client.on('message', message => {
     if (message.content === mcCommand) {
